@@ -15,7 +15,7 @@ public class DBAccess {
 	public static synchronized Connection getConnection() throws DAOException, ClassNotFoundException, IOException {
 		try {
 			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-			InputStream input = classLoader.getResourceAsStream("properties/confing.properties");
+			InputStream input = classLoader.getResourceAsStream("properties/config.properties");
 
 			Properties p = new Properties();
 			p.load(input);
