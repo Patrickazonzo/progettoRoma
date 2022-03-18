@@ -9,6 +9,7 @@ import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.RowSetProvider;
 
 import com.betacom.businesscomponent.model.Corsista;
+import com.betacom.businesscomponent.CorsistaIdGenerator;
 
 public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 	private CachedRowSet rowSet;
@@ -34,7 +35,7 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 			rowSet.setCommand(SELECT_CORSISTA);
 			rowSet.execute(conn);
 			rowSet.moveToInsertRow();
-			rowSet.updateInt(1, entity.getCodCorsista());
+			rowSet.updateInt(1, CorsistaIdGenerator.getInstance().getNextId());
 			rowSet.updateString(2, entity.getNomeCorsista());
 			rowSet.updateString(3, entity.getCognomeCorsista());
 			rowSet.updateByte(4, entity.getPrecedentiFormativi());
