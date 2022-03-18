@@ -7,7 +7,7 @@ public interface GenericDAO<T> {
 
 	void delete(Connection conn, T entity) throws DAOException;
 
-	T getById(Connection conn, long id) throws DAOException;
+	T getById(Connection conn, long cod) throws DAOException;
 
 	T[] getAll(Connection conn) throws DAOException;
 }

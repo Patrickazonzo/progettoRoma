@@ -25,17 +25,18 @@ public class Corso {
 	public void setNomeCorso(String nomeCorso) {
 		this.nomeCorso = nomeCorso;
 	}
+	
+	public void setDataInizioCorso(java.util.Date date) {
+		this.dataInizioCorso = (Date) date;
+	}
 	public Date getDataInizioCorso() {
 		return dataInizioCorso;
-	}
-	public void setDataInizioCorso(Date dataInizioCorso) {
-		this.dataInizioCorso = dataInizioCorso;
 	}
 	public Date getDataFineCorso() {
 		return dataFineCorso;
 	}
-	public void setDataFineCorso(Date dataFineCorso) {
-		this.dataFineCorso = dataFineCorso;
+	public void setDataFineCorso(java.util.Date date) {
+		this.dataFineCorso = (Date) date;
 	}
 	public double getCostoCorso() {
 		return costoCorso;
