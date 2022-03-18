@@ -9,7 +9,7 @@ public class Corso {
 	private Date dataFineCorso;
 	private double costoCorso;
 	private String commentiCorso;
-	private int aulaCorso;
+	private String aulaCorso;
 	public Corso() {
 		
 	}
@@ -50,11 +50,17 @@ public class Corso {
 	public void setCommentiCorso(String commentiCorso) {
 		this.commentiCorso = commentiCorso;
 	}
-	public int getAulaCorso() {
+	public String getAulaCorso() {
 		return aulaCorso;
 	}
-	public void setAulaCorso(int aulaCorso) {
+	public void setAulaCorso(String aulaCorso) {
 		this.aulaCorso = aulaCorso;
+	}
+	@Override
+	public String toString() {
+		return "Corso [codCorso=" + codCorso + ", nomeCorso=" + nomeCorso + ", dataInizioCorso=" + dataInizioCorso
+				+ ", dataFineCorso=" + dataFineCorso + ", costoCorso=" + costoCorso + ", commentiCorso=" + commentiCorso
+				+ ", aulaCorso=" + aulaCorso + "]";
 	}
 
 }

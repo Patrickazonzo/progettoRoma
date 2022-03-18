@@ -54,7 +54,7 @@ public class CorsoDAO implements GenericDAO<Corso>, DAOConstants {
 					corso.setDataFineCorso(new java.util.Date(rs.getDate(4).getTime()));
 					corso.setCostoCorso(rs.getDouble(5));
 					corso.setCommentiCorso(rs.getString(6));
-					corso.setAulaCorso(rs.getInt(7));
+					corso.setAulaCorso(rs.getString(7));
 				}
 				
 		} catch (SQLException sql) {
