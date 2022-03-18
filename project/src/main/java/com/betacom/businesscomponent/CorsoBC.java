@@ -11,25 +11,28 @@ import com.betacom.businesscomponent.model.Corso;
 
 public class CorsoBC {
 	private Connection conn;
-
-	public CorsoBC() throws DAOException, ClassNotFoundException, IOException {
-		conn = DBAccess.getConnection();
+	public CorsoBC() {
 	}
 
-	public Corso[] getCorso() throws DAOException {
+	public Corso[] getAll() throws DAOException, ClassNotFoundException, IOException {
 		try {
+			conn = DBAccess.getConnection();
 			return CorsoDAO.getFactory().getAll(conn);
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
+		} finally {
+			DBAccess.closeConnection();
 		}
 	}
 
-	public void delete(Corso corso) throws DAOException {
+	public void delete(Corso corso) throws DAOException, ClassNotFoundException, IOException {
 		try {
+			conn = DBAccess.getConnection();
 			CorsoDAO.getFactory().delete(conn, corso);
-
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
+		} finally {
+			DBAccess.closeConnection();
 		}
 	}
 }
