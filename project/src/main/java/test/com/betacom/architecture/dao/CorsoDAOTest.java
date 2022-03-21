@@ -28,8 +28,8 @@ class CorsoDAOTest {
 		corso = new Corso();
 		corso.setCodCorso(1);
 		corso.setNomeCorso("JAVA");
-		corso.setDataInizioCorso(new java.sql.Date(new GregorianCalendar(2022,1,15).getTime()).getTime());
-		corso.setDataFineCorso(new GregorianCalendar(2022,1,18).getTime());
+		corso.setDataInizioCorso(new java.sql.Date(12-12-2022));
+		corso.setDataFineCorso(new java.sql.Date(12-12-2023));
 		corso.setCostoCorso(50.00);
 		corso.setCommentiCorso("Corso di java Enterprise");
 		corso.setAulaCorso("1");
