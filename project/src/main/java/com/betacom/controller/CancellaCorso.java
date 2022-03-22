@@ -14,7 +14,7 @@ import com.betacom.businesscomponent.model.Corso;
 
 
 
-@WebServlet("/cancellacorso")
+@WebServlet("/cancellacorso") 
 public class CancellaCorso  {
 	private static final long serialVersionUID = 10323L;
 
