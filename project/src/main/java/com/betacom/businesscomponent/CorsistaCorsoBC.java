@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.betacom.architecture.dao.CorsistaCorsoDAO;
 import com.betacom.architecture.dao.DAOException;
 import com.betacom.architecture.dbaccess.DBAccess;
 import com.betacom.businesscomponent.model.CorsistaCorso;
@@ -13,7 +14,9 @@ public class CorsistaCorsoBC {
 	
 	public void create (CorsistaCorso cc ) throws ClassNotFoundException, IOException, DAOException {
 		try {
+			
 			conn = DBAccess.getConnection();
+			CorsistaCorsoDAO.getFactory().create(conn, cc);
 			if(cc.getCodCorso() > 0) {
 				cc.setCodCorsista(0);
 			}
