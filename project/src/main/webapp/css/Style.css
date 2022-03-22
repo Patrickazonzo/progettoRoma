@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+#apice {
+	margin:0;
+	display: flex;
+  flex-wrap: wrap;
+   justify-content: space-between;
+ 
+}
+#home {
+
+	
+}
