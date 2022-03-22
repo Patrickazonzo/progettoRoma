@@ -35,3 +35,10 @@ codcorso int,
 constraint p_cc primary key (codcorsista,codcorso),
 constraint f_codcorsista foreign key (codcorsista) references corsista(codcorsista) on delete cascade,
 constraint f_codcorso foreign key (codcorso) references corso(codcorso) on delete cascade);
+
+create sequence corsista_seq start with 15;
+
+
+
+
+

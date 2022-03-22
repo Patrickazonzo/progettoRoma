@@ -8,4 +8,5 @@ public interface DAOConstants {
 		public String SELECT_CORSO_BYID = "Select * from corso where codCorso=?";
 		public String SELECT_REPORT = "Select * from report";
 		public String SELECT_ADMIN_COD= "Select codutente from admin where nomeadmin = ?,cognomeadmin = ? ";
+		public String SELECT_CORSISTA_SEQ="Select corsista_seq.nextval from dual";
 }
