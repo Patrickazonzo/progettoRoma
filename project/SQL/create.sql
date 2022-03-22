@@ -38,6 +38,12 @@ constraint f_codcorso foreign key (codcorso) references corso(codcorso) on delet
 
 create sequence corsista_seq start with 16;
 
+create view corsofreq as
+select nomecorso, count(*) conteggio from corso
+left join corsistacorso on corso.codcorso=corsistacorso.codcorso
+group by corso.nomecorso
+order by conteggio desc;
+
 
 
 

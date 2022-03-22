@@ -10,3 +10,4 @@ drop table corsista cascade constraint;
 drop table corsistacorso cascade constraint;
 drop table docente cascade constraint;
 drop sequence corsista_seq;
+drop view corsofreq cascade constraint;
