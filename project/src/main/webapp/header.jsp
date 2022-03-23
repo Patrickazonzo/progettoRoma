@@ -5,12 +5,12 @@
 		<nav class="navbar navbar-expand-lg " id="apice">
 			<div>
 				<a class="navbar-brand"><img alt="Logo" src="img/logo2.png"></a>
-				</div>
-				<div class="navbar-nav" id="home">
-				<a href="index.jsp" ><i class="fas fa-house-user">Home</i></a>	
+			</div>
+			<div class="navbar-nav">
+				<a href="login.jsp" id="home"><i class="fas fa-house-user">Home</i></a> 
 				<a href="/logout"><i class="fas fa-power-off">Log Out</i></a>
-				</div>
-		
+			</div>
+
 		</nav>
 	</header>
 </body>

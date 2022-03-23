@@ -3,14 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@include file="CDN.html"%>
+
 <link rel="stylesheet" type="text/css" href="css/Style.css">
 <meta charset="ISO-8859-1">
+<%@include file="CDN.html"%>
 <title>login</title>
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<div class="container d-flex justify-content-center">
+	<div class="d-flex justify-content-center corpo">
 		<div class="page-header m-3">
 			<h3>Admin Login</h3>
 			
@@ -20,12 +21,12 @@
 		<form action="/<%=application.getServletContextName()%>/controllo"
 			method="post" class="form-horizontal">
 			<div class="form-group">
-				<label class="control-label">Username</label>
+				<label class="control-label">Nome</label>
 				<div class=" inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
 							class="glyphicon glyphicon-user"></i>
-						</span> <input type="text" name="username" placeholder="Username..."
+						</span> <input type="text" name="Nome" placeholder="Nome..."
 							class="form-control">
 					</div>
 				</div>
@@ -33,12 +34,12 @@
 			</div>
 
 			<div class="form-group">
-				<label class="control-label">Password</label>
+				<label class="control-label">CodCliente</label>
 				<div class="inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
 							class="glyphicon glyphicon-lock"></i>
-						</span> <input type="password" name="password" placeholder="Password..."
+						</span> <input type="password" name="CodCliente" placeholder="CodCliente..."
 							class="form-control">
 					</div>
 				</div>
