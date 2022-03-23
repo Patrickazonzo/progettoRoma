@@ -1,5 +1,6 @@
 package com.betacom.architecture.dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +9,7 @@ import java.sql.SQLException;
 import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.RowSetProvider;
 
+import com.betacom.businesscomponent.idgenerator.CorsistaIdGenerator;
 import com.betacom.businesscomponent.model.Corsista;
 
 public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
@@ -34,7 +36,7 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 			rowSet.setCommand(SELECT_CORSISTA);
 			rowSet.execute(conn);
 			rowSet.moveToInsertRow();
-			rowSet.updateInt(1, entity.getCodCorsista());
+			rowSet.updateLong(1, CorsistaIdGenerator.getInstance().getNextId());
 			rowSet.updateString(2, entity.getNomeCorsista());
 			rowSet.updateString(3, entity.getCognomeCorsista());
 			rowSet.updateByte(4, entity.getPrecedentiFormativi());
@@ -44,6 +46,9 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
+		}catch(IOException | ClassNotFoundException exc) {
+			System.out.println(exc.getMessage());
+			exc.printStackTrace();
 		}
 	}
 

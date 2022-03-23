@@ -9,6 +9,13 @@ public interface DAOConstants {
 	public String SELECT_REPORT = "Select * from report";
 	public String SELECT_ADMIN_COD = "Select codutente from admin where nomeadmin = ?,cognomeadmin = ? ";
 	public String SELECT_CORSISTA_SEQ = "Select corsista_seq.nextval from dual";
+	public String SELECT_CORSO = "Select * from corso";
+	public String SELECT_DOC ="select * from docente";
+	public String SELECT_COGNOME_DOC = "Select cognomedocente from docente"
+			+ "join corso on corso.coddocente = docente.coddocente"
+			+ "where corso.codcorso = (select codcorso from corso"
+			+ "where nomecorso = '?')";
+
 
 	public String SELECT_TOT_CORSISTI = "Select count() as tot_corsista from corsista";// ok
 	public String SELECT_CORSO_PIU_FREQUE = "select nomecorso, conteggio from corsofreq where conteggio = (select max(conteggio) from corsofreq)";

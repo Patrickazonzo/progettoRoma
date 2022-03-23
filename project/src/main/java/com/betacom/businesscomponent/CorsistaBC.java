@@ -16,15 +16,14 @@ public class CorsistaBC {
 	}
 	
 	public Corsista getById(long cod) throws ClassNotFoundException, IOException, DAOException {
-		Corsista cs;
 		try {
 			conn = DBAccess.getConnection();
-			cs = CorsistaDAO.getFactory().getById(conn, cod);
+			return CorsistaDAO.getFactory().getById(conn, cod);
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
 		} finally {
 			DBAccess.closeConnection();
-		} return cs;
+		} 
 	}
 	
 	public void create(Corsista corsista) throws ClassNotFoundException, IOException, DAOException {

@@ -10,6 +10,14 @@ public class Corso {
 	private double costoCorso;
 	private String commentiCorso;
 	private String aulaCorso;
+	private int codDocente;
+	
+	public int getCodDocente() {
+		return codDocente;
+	}
+	public void setCodDocente(int codDocente) {
+		this.codDocente = codDocente;
+	}
 	public Corso() {
 		
 	}
