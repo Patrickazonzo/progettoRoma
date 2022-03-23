@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 .corpo{
-   background-image: url("../img/sfondo.jpg");
+   background-image: url("../img/sfondo3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -9,10 +9,6 @@
 
 }
 
-
-#home {
-	padding-right: 5px;
-}
 
 .icona{
   width: 110px;
@@ -38,4 +34,33 @@
 
 #piepag {
     padding: 15px;
+}
+#flo{
+ background-image: url("../img/sfo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 15%;
+  	padding-bottom: 15%;
+}
+
+.uno{
+	background-color: green;
+	margin-left:9%;
+	border-color: black;
+	border-width: 3px;
+	color: black;
+}
+.due {
+		background-color: white;
+		border-color: black;
+	border-width: 3px;
+	
+}
+.tre{
+	background-color: red;
+	margin-right:9%;
+		border-color: black;
+	border-width: 3px;
+	color: black;
 }
