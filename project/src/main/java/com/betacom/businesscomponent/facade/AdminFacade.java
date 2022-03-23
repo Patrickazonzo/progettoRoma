@@ -5,8 +5,10 @@ import java.util.Vector;
 
 import com.betacom.architecture.dao.DAOException;
 import com.betacom.businesscomponent.CorsistaBC;
+import com.betacom.businesscomponent.CorsistaCorsoBC;
 import com.betacom.businesscomponent.CorsoBC;
 import com.betacom.businesscomponent.model.Corsista;
+import com.betacom.businesscomponent.model.CorsistaCorso;
 import com.betacom.businesscomponent.model.Corso;
 
 public class AdminFacade {
@@ -30,10 +32,12 @@ public class AdminFacade {
 		CorsistaBC csBC = new CorsistaBC();
 		csBC.create(cs);
 	}
-	
-	public Vector<String[]> getStatistiche(){
-		return null;	
+	public void createCorsistaCorso(CorsistaCorso cc) throws ClassNotFoundException, DAOException, IOException {
+        CorsistaCorsoBC ccBC = new CorsistaCorsoBC();
+        ccBC.create(cc);
+    }
+	public Corso[] getAllCorsi() throws DAOException, ClassNotFoundException, IOException {
+		CorsoBC cBC = new CorsoBC();		
+		return cBC.getAll();
 	}
-	
-	
 }
