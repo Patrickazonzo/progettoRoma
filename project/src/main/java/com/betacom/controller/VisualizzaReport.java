@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/inseriscireport")
-public class InserisciReport extends HttpServlet {
+public class VisualizzaReport extends HttpServlet {
 	private static final long serialVersionUID = 73737978172721L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

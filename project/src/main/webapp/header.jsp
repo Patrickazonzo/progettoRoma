@@ -12,5 +12,6 @@
 			</div>
 
 		</nav>
+		<hr size="10" color="black">
 	</header>
 </body>
