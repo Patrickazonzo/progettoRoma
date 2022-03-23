@@ -1,4 +1,18 @@
 @charset "ISO-8859-1";
+.corpo{
+   background-image: url("../img/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 11%;
+    padding-bottom: 11%;
+
+}
+
+
+#home {
+	padding-right: 5px;
+}
 
 .icona{
   width: 110px;
