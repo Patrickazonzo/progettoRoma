@@ -1,7 +1,6 @@
 package com.betacom.businesscomponent.facade;
 
 import java.io.IOException;
-import java.util.Vector;
 
 import com.betacom.architecture.dao.DAOException;
 import com.betacom.businesscomponent.CorsistaBC;

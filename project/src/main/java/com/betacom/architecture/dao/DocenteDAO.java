@@ -1,37 +1,22 @@
 package com.betacom.architecture.dao;
 
-import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
-import javax.sql.rowset.CachedRowSet;
-import javax.sql.rowset.RowSetProvider;
-
-import com.betacom.businesscomponent.model.Corsista;
 import com.betacom.businesscomponent.model.Docente;
 
-public class DocenteDAO implements GenericDAO<Docente>, DAOConstants{
+public class DocenteDAO implements GenericDAO<Docente>, DAOConstants {
 
-	
-	private CachedRowSet rowSet;
-	
 	public static DocenteDAO getFactory() throws DAOException {
 		return new DocenteDAO();
 	}
 
 	private DocenteDAO() throws DAOException {
-		try {
 
-			rowSet = RowSetProvider.newFactory().createCachedRowSet();
-
-		} catch (SQLException sql) {
-			throw new DAOException(sql);
-		}
 	}
-
-	
 
 	@Override
 	public Docente[] getAll(Connection conn) throws DAOException {
@@ -49,7 +34,7 @@ public class DocenteDAO implements GenericDAO<Docente>, DAOConstants{
 				docente.setNomedocente(rs.getString(2));
 				docente.setCognomedocente(rs.getString(3));
 				docente.setCvdocente(rs.getString(4));
-				
+
 				docenti[i] = docente;
 			}
 			rs.close();
@@ -57,21 +42,19 @@ public class DocenteDAO implements GenericDAO<Docente>, DAOConstants{
 			throw new DAOException(sql);
 		}
 		return docenti;
-		
-		
-		
+
 	}
 
 	@Override
 	public void create(Connection conn, Docente entity) throws DAOException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void delete(Connection conn, Docente entity) throws DAOException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -79,22 +62,22 @@ public class DocenteDAO implements GenericDAO<Docente>, DAOConstants{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	public  String getNominativoDocente(Connection conn, String nomecorso) throws DAOException {
-		
+
+	public String getNominativoDocente(Connection conn, String nomecorso) throws DAOException {
+
 		PreparedStatement ps;
 		String docenti;
 		try {
-			ps=conn.prepareStatement(SELECT_COGNOME_DOC);
+			ps = conn.prepareStatement(SELECT_COGNOME_DOC);
 			ps.setString(1, nomecorso);
 			ResultSet rs = ps.executeQuery();
 			docenti = rs.getString(1);
-			
+
 			rs.close();
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
 		}
 		return docenti;
-		
-}
+
+	}
 }
