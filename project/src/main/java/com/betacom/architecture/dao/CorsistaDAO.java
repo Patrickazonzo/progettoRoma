@@ -30,7 +30,7 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 	}
 
 	@Override
-	public void create(Connection conn, Corsista entity) throws DAOException, ClassNotFoundException, IOException {
+	public void create(Connection conn, Corsista entity) throws DAOException {
 
 		try {
 			rowSet.setCommand(SELECT_CORSISTA);
@@ -46,6 +46,9 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
+		}catch(IOException | ClassNotFoundException exc) {
+			System.out.println(exc.getMessage());
+			exc.printStackTrace();
 		}
 	}
 
