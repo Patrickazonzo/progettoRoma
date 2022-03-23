@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+.icona{
+  width: 110px;
+}
+
+#apice {
+	margin:0;
+	display: flex;
+  flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+}
+
+
+
+.privacy:hover {
+    color: red;
+  
+}
+
+#piepag {
+    padding: 15px;
+}

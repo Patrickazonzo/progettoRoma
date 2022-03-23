@@ -7,9 +7,9 @@ insert into docente values (3,'Paolo','Belloni');
 
 insert into corso values (1,'Analisi','04-GEN-2022','05-LUG-2022',2000.00,'Corso di Analisi matematica','AulaA1',1);
 insert into corso values (2,'Programmazione Java Base','01-GEN-2022','01-MAR-2022',800.00,'Corso di programmazione base in Java','AulaA2',1);
-insert into corso values (3,'Inglese','21-GEN-2022','11-APR-2022',900.00,'Livello B2','AulaB1',2);
-insert into corso values (4,'Chimica','1-MAR-2022','2-DIC-2022',1700.00,'Corso di Chimica base','AulaC3',3);
-insert into corso values (5,'Programmazione Java Advanced','1-GEN-2022','30-GIU-2022',2600.00,'Corso di programmazione avanzato di Java','AulaC1',2);
+insert into corso values (3,'Inglese','21-GIU-2022','11-SET-2022',900.00,'Livello B2','AulaB1',2);
+insert into corso values (4,'Chimica','25-AGO-2022','2-DIC-2022',1700.00,'Corso di Chimica base','AulaC3',3);
+insert into corso values (5,'Programmazione Java Advanced','12-GIU-2022','30-OTT-2022',2600.00,'Corso di programmazione avanzato di Java','AulaC1',2);
 
 insert into corsista values (1,'Gino','Verdi',1);
 insert into corsista values (2,'Lucia','Massi',0);
