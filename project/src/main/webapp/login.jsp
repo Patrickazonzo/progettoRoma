@@ -25,21 +25,31 @@
 				<div class="input-group">
 					<span class="input-group-addon"> <i
 						class="glyphicon glyphicon-user"></i>
-					</span> <input type="text" name="Nome" placeholder="Nome..."
+					</span> <input type="text" name="nomeadmin" placeholder="Nome..."
 						class="form-control">
 				</div>
 			</div>
 			<div class="col-md-7 control-label"></div>
 
+			<div class="form-group ">
+			<label class="control-label">Cognome</label>
+			<div class=" inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"> <i
+						class="glyphicon glyphicon-user"></i>
+					</span> <input type="text" name="cognomeadmin" placeholder="Cognome..."
+						class="form-control">
+				</div>
+			</div>
+			<div class="col-md-7 control-label"></div>
 
-
-			<label class="control-label">CodCliente</label>
+			<label class="control-label">CodAdmin</label>
 			<div class="inputGroupContainer">
 				<div class="input-group">
 					<span class="input-group-addon"> <i
 						class="glyphicon glyphicon-lock"></i>
-					</span> <input type="password" name="CodCliente"
-						placeholder="CodCliente..." class="form-control">
+					</span> <input type="password" name="codadmin"
+						placeholder="Codice Amministratore..." class="form-control">
 				</div>
 			</div>
 			<div class="col-md-7 control-label"></div>
@@ -56,6 +66,7 @@
 							REGISTRATI<span class="glyphicon glyphicon-log-in"></span>
 						</button></a>
 				</div>
+			</div>
 			</div>
 		</div>
 	</div>
