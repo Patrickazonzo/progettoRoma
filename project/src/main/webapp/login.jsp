@@ -19,6 +19,7 @@
 
 		</div>
 
+	<form action="controlloadmin" method="post" class = "form-horizontal">
 		<div class="form-group ">
 			<label class="control-label">Nome</label>
 			<div class=" inputGroupContainer">
@@ -68,8 +69,10 @@
 				</div>
 			</div>
 			</div>
+				</div>
+		</form>
 		</div>
-	</div>
+
 	<footer class="footer"><%@ include file="footer.html"%>
 	</footer>
 </body>

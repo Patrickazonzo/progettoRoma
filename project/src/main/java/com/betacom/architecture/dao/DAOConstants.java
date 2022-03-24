@@ -7,7 +7,7 @@ public interface DAOConstants {
 	public String DELETE_CORSO = "Delete from corso where codCorso=?";
 	public String SELECT_CORSO_BYID = "Select * from corso where codCorso=?";
 	public String SELECT_REPORT = "Select * from report";
-	public String SELECT_ADMIN_COD = "Select codadmin from admin where nomeadmin = ?,cognomeadmin = ? ";
+	public String SELECT_ADMIN_COD = "Select codadmin from admin where nomeadmin = ? and cognomeadmin = ? ";
 	public String SELECT_CORSISTA_SEQ = "Select corsista_seq.nextval from dual";
 	public String SELECT_CORSO = "Select * from corso";
 	public String SELECT_DOC ="select * from docente";
