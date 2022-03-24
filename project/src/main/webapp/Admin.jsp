@@ -15,13 +15,13 @@
 
 	<div class="container-fluid d-flex justify-content-between" id="flo">
 	
-		<button type="button" class="btn  uno" >INSERISCI
-			CORSISTA</button>
+		<button type="button" class="btn  uno" ></button>
 
-		<button type="button" class="btn due">VISUALIZZA STATISTICHE</button>
+		<button type="button" class="btn due"></button>
 
-		<button type="button" class="btn  tre">ELIMINA CORSO</button>
+		<button type="button" class="btn  tre"></button>
 		
+	</div>
 	</div>
 
 	<footer class="footer"><%@ include file="footer.html"%>
