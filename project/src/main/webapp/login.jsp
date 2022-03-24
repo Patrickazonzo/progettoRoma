@@ -58,12 +58,12 @@
 			<div class="row">
 				<div class="col-md-4  col-md-offset-1 d-flex ">
 
-					<button type="submit" class="btn btn-warning mr-2 ">
+					<button type="submit" class="btn btn-warning mr-2 mt-4 ">
 						LOGIN<span class="glyphicon glyphicon-log-in"></span>
 					</button>
 
 					<a href="registrati.jsp"><button type="button"
-							class="btn btn-warning">
+							class="btn btn-warning mt-4">
 							REGISTRATI<span class="glyphicon glyphicon-log-in"></span>
 						</button></a>
 				</div>

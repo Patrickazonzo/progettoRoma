@@ -15,14 +15,14 @@
 
 	<div class="container-fluid d-flex justify-content-between" id="flo">
 	
-		<button type="button" class="btn  uno" ></button>
+		<a href="insertCorsista.jsp"><button type="button" class="btn uno" ></button></a>
 
 		<button type="button" class="btn due"></button>
 
-		<button type="button" class="btn  tre"></button>
+		<button type="button" class="btn tre"></button>
 		
 	</div>
-	</div>
+	
 
 	<footer class="footer"><%@ include file="footer.html"%>
 	</footer>

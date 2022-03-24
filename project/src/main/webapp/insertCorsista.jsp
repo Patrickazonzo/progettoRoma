@@ -10,16 +10,11 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<!-- 
-	codice corsista
-	nome corsista
-	cognome corsista
-	precedenti formativi "SI|NO" as "1|0"
-	 -->
-	<div class="container-fluid d-flex justify-content-center bd-light" 
-		id="imgCorsista">
-		<form method="post" name="modulo">
-			<div >
+
+		<div class="container-fluid d-flex justify-content-between bd-light"
+			id="imgCorsista">
+<div></div>
+			<div>
 				<table>
 					<tr>
 						<td colspan="2" align="center"><b>Registrazione corsista<br>Tutti
@@ -27,27 +22,45 @@
 						</b></td>
 					</tr>
 					<tr>
-						<td ><b>CodCorsista</b></td>
-						<td><input type="password" name="password"></td>
+						<td><b>*Nome Corsista</b></td>
+						<td><input type="text" name="nomecorsista"></td>
+					</tr>
+					<tr>
+						<td><b>*Cognome Corsista</b></td>
+						<td><input type="text" name="cognomecorsista"></td>
 					</tr>
 
-					<tr>
-						<td ><b>NomeCorsista</b></td>
-						<td><input type="text" name="nome"></td>
-					</tr>
-					<tr>
-						<td><b>CognomeCorsista</b></td>
-						<td><input type="text" name="cognome"></td>
-					</tr>
 
 					<tr>
-						<td ><b>Corsi Precedenti</b></td>
+						<td><b>*Nome Corso</b></td>
+						<td><input type="text" name="nomecorso"></td>
+					</tr>
+					<tr>
+						<td><b>*Data inizio corso</b></td>
+						<td><input type="date" name="datainiziocorso"></td>
+					</tr>
+					<tr>
+						<td><b>*Data fine corso</b></td>
+						<td><input type="date" name="datafinecorso"></td>
+					</tr>
+					<tr>
+						<td><b>Commenti</b></td>
+						<td><textarea class="textarea" style="resize: none"
+								name="commenti" rows="4" cols="50"></textarea></td>
+					</tr>
+					<tr>
+						<td><b>Corsi Precedenti</b></td>
 						<td><input type="checkbox" name="Si"> Si <input
 							type="checkbox" name="No"> No</td>
 
 					</tr>
 					<tr>
-						<td ></td>
+						<td><b>Aula Corso</b></td>
+						<td><input type="text" name="aulacorso"></td>
+					</tr>
+
+					<tr>
+						<td></td>
 						<td><a href="#"><button type="button"
 									class="btn btn-warning">
 									INVIA<span class="glyphicon glyphicon-log-in"></span>
@@ -56,8 +69,14 @@
 
 				</table>
 			</div>
-		</form>
-	</div>
+			<img id="dea1" alt="Logo" src="img/12.png">
+		</div>
+
+
+
+
+	<a><img id="dea" alt="Logo" src="img/dea.png"></a>
+
 	<footer class="footer"><%@ include file="footer.html"%>
 	</footer>
 </body>
