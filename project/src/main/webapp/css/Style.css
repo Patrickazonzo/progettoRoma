@@ -1,18 +1,14 @@
 @charset "ISO-8859-1";
 .corpo{
-   background-image: url("../img/sfondo.jpg");
+   background-image: url("../img/sfondo3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 11%;
-    padding-bottom: 11%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 
 }
 
-
-#home {
-	padding-right: 5px;
-}
 
 .icona{
   width: 110px;
@@ -39,3 +35,32 @@
 #piepag {
     padding: 15px;
 }
+#flo{
+ background-image: url("../img/sfo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ 
+}
+
+.uno{
+		
+	padding:280px;
+
+}
+.due {
+	padding:280px;
+	
+}
+.tre{
+		
+	padding:250px;
+
+}
+
+#imgCorsista {
+
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+
