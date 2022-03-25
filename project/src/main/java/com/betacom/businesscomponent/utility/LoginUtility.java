@@ -18,10 +18,10 @@ private Connection conn;
 	}
 	
 	
-	public String getAdminCod(String codadmin,String cognomeadmin) throws DAOException {
+	public String getAdminCod(String nomeadmin,String cognomeadmin) throws DAOException {
 		try {
 			PreparedStatement ps = conn.prepareStatement(SELECT_ADMIN_COD);
-			ps.setString(1, codadmin);
+			ps.setString(1, nomeadmin);
 			ps.setString(2, cognomeadmin);
 			ResultSet rs = ps.executeQuery();
 			if(rs.next()) {

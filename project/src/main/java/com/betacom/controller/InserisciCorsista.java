@@ -62,23 +62,23 @@ public class InserisciCorsista extends HttpServlet {
 	 
 	   } 
 	 
-	   if (request.getParameter("dataInizioCorso") == null 
-	     && DateUtility.isValid(request.getParameter("dataInizioCorso")) == false) { 
+	   if (request.getParameter("datainiziocorso") == null 
+	     && DateUtility.isValid(request.getParameter("datainiziocorso")) == false) { 
 	    response.sendRedirect("#"); 
 	   } 
-	   if (request.getParameter("dataFineCorso") == null 
-	     && DateUtility.isValid(request.getParameter("dataFineCorso")) == false) { 
+	   if (request.getParameter("datafinecorso") == null 
+	     && DateUtility.isValid(request.getParameter("datafinecorso")) == false) { 
 	    response.sendRedirect("#"); 
 	   } 
-	   if (Integer.parseInt(request.getParameter("dataFineCorso")) 
-	     - Integer.parseInt(request.getParameter("dataInizioCorso")) < 2) 
+	   if (Integer.parseInt(request.getParameter("datafinecorso")) 
+	     - Integer.parseInt(request.getParameter("datainiziocorso")) < 2) 
 	    response.sendRedirect("#"); 
 	 
 	   if (request.getParameter("commenti").length() > 200) 
 	    response.sendRedirect("#"); 
 	 
-	   boolean verificaAula = Pattern.matches(request.getParameter("aulaCorso"), "\\w"); 
-	   if (request.getParameter("aulaCorso").length() > 30 && verificaAula == false) 
+	   boolean verificaAula = Pattern.matches(request.getParameter("aulacorso"), "\\w"); 
+	   if (request.getParameter("aulacorso").length() > 30 && verificaAula == false) 
 	    response.sendRedirect("#"); 
 	 
 	   if (request.getParameter("docente") == null || request.getParameter("docente") 

@@ -23,11 +23,8 @@ public class ReportUtility implements DAOConstants {
 
 	public Vector<String[]> getReport() throws DAOException {
 		try {
-			Statement stmt = conn.createStatement(
-			ResultSet.TYPE_SCROLL_INSENSITIVE,
-			ResultSet.CONCUR_READ_ONLY);
-			
-			
+			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+
 			ResultSet rs1 = stmt.executeQuery(SELECT_TOT_CORSISTI);
 			stmt.close();
 
@@ -50,39 +47,64 @@ public class ReportUtility implements DAOConstants {
 			stmt = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
 			ResultSet rs6 = stmt.executeQuery(SELECT_ELENCO_CORSISTI);
 			stmt.close();
-			
+
 			stmt = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
 			ResultSet rs7 = stmt.executeQuery(SELECT_DOC_CORSO);
 			stmt.close();
-			
+
 			stmt = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
 			ResultSet rs8 = stmt.executeQuery(SELECT_POSTI_LIBERI);
 			stmt.close();
-			
-			
+
 			ResultSetMetaData meta = rs6.getMetaData();
 			int numColonne = meta.getColumnCount();
 
-			String corsisti = rs1.getString(1);
-			String corso = rs2.getString(1);
-			String data = rs3.getString(1);
-			String media = rs4.getString(1);
-			String commenti = rs5.getString(1);
+			String[] corsisti;
+			int i, a, b, c, d, e, f = 0;
+			while (rs1.next())
+				corsisti[i] = rs1.getString(i + 1);
+
+			String[] corso;
+			while (rs2.next())
+				corso[a] = rs2.getString(a + 1);
+
+			String[] data;
+			while (rs3.next())
+				data[b] = rs3.getString(b + 1);
+
+			String[] media;
+			while (rs4.next())
+				media[c] = rs4.getString(c + 1);
+
+			String[] commenti;
+			while (rs5.next())
+				media[d] = rs5.getString(d + 1);
+
 			Vector<String[]> dati = new Vector<String[]>();
 			rs6.beforeFirst();
 			while (rs6.next()) {
 				String[] riga = new String[numColonne];
-				for (int i = 0; i < numColonne; i++) {
-					riga[i] = rs6.getString(i + 1);
+				for (int g = 0; g < numColonne; g++) {
+					riga[g] = rs6.getString(g + 1);
 					dati.add(riga);
 				}
 			}
-			String docente = rs7.getString(1);
-			String posti = rs8.getString(1);
-			dati.addAll(corsisti);
-			
+			String[] docente;
+			while (rs7.next())
+				docente[e] = rs7.getString(e + 1);
+
+			String[] posti;
+			while (rs8.next())
+				posti[f] = rs8.getString(f + 1);
+
+			dati.add(corsisti);
+			dati.add(corso);
+			dati.add(media);
+			dati.add(commenti);
+			dati.add(docente);
+			dati.add(posti);
+
 			rs1.close();
-			stmt.close();
 			rs2.close();
 			rs3.close();
 			rs4.close();
@@ -90,11 +112,11 @@ public class ReportUtility implements DAOConstants {
 			rs6.close();
 			rs7.close();
 			rs8.close();
-			}
+
 			return dati;
-		}catch (SQLException sql) {
+		} catch (SQLException sql) {
 
-		throw new DAOException(sql);
+			throw new DAOException(sql);
+		}
 	}
-
 }
