@@ -47,5 +47,15 @@ public class CorsistaBC {
 			DBAccess.closeConnection();
 		}
 	}
-
+	
+	public Corsista[] getAll() throws DAOException, ClassNotFoundException, IOException {
+		try {
+			conn = DBAccess.getConnection();
+			return CorsistaDAO.getFactory().getAll(conn);	
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		} finally {
+			DBAccess.closeConnection();
+		}
+	}
 }

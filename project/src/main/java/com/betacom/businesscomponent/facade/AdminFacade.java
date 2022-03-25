@@ -49,4 +49,8 @@ public class AdminFacade {
 		DocenteBC dBC = new DocenteBC();
 		return dBC.getNominativoDocente(nomecorso);
 	}
+	public Corsista[] getAllCorsisti() throws DAOException, ClassNotFoundException, IOException {
+		CorsistaBC csBC = new CorsistaBC();		
+		return csBC.getAll();
+	}
 }
