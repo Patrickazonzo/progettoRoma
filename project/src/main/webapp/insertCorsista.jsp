@@ -10,11 +10,13 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
+	<form action="inseriscicorsista" method="post" class="form-horizontal">
 
 		<div class="container-fluid d-flex justify-content-between bd-light"
 			id="imgCorsista">
-<div></div>
+			<div></div>
 			<div>
+
 				<table>
 					<tr>
 						<td colspan="2" align="center"><b>Registrazione corsista<br>Tutti
@@ -61,9 +63,9 @@
 
 					<tr>
 						<td></td>
-						<td><a href="#"><button type="button"
+						<td><a href="inseriscicorsista"><button type="button"
 									class="btn btn-warning">
-									INVIA<span class="glyphicon glyphicon-log-in"></span>
+									INVIA<span  class="glyphicon glyphicon-log-in"></span>
 								</button></a></td>
 					</tr>
 
@@ -72,7 +74,7 @@
 			<img id="dea1" alt="Logo" src="img/12.png">
 		</div>
 
-
+	</form>
 
 
 	<a><img id="dea" alt="Logo" src="img/dea.png"></a>
