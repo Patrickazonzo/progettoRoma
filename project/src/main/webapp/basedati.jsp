@@ -1,17 +1,17 @@
-<%@page import="java.util.Enumeration"%>
 <%
 	String nomeAdmin= (String) session.getAttribute("nomeadmin");
 	if(nomeAdmin!=null){
 %>
+<%@page import="java.util.Enumeration"%>
 <%@page import="com.betacom.businesscomponent.model.Corsista"%>
 <%@page import="com.betacom.businesscomponent.facade.AdminFacade"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<%@include file="CDN.html"%>
+<title>Base Dati</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
@@ -36,8 +36,8 @@
 					%>
 						<tr>
 							<td><%= corsisti[i].getCodCorsista() %></td>
-							<td><form action="infocorsista.jsp">
-							 <button type="button"><%= corsisti[i].getNomeCorsista()%></button>
+							<form action="infocorsista.jsp"><td>
+							 <button type="submit"><%= corsisti[i].getNomeCorsista()%></button>
 							 </form></td>
 							<td><%= corsisti[i].getCognomeCorsista()  %></td>
 							<td><%= corsisti[i].getPrecedentiFormativi() %></td>			

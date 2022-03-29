@@ -3,6 +3,7 @@ package com.betacom.businesscomponent.model;
 public class CorsistaCorso {
 	private  long codCorsista;
 	private long codCorso;
+	
 	public long getCodCorsista() {
 		return codCorsista;
 	}
@@ -15,11 +16,10 @@ public class CorsistaCorso {
 	public void setCodCorso(long codCorso) {
 		this.codCorso = codCorso;
 	}
-	public CorsistaCorso() {
-		super();
+	public CorsistaCorso() {		
 	}
-	public CorsistaCorso(long codCorsista, long codCorso) {
-		super();
+	
+	public CorsistaCorso(long codCorsista, long codCorso) {		
 		this.codCorsista = codCorsista;
 		this.codCorso = codCorso;
 	}

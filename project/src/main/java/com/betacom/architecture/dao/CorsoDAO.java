@@ -48,8 +48,8 @@ public class CorsoDAO implements GenericDAO<Corso>, DAOConstants {
 				corso = new Corso();
 				corso.setCodCorso(rs.getLong(1));
 				corso.setNomeCorso(rs.getString(2));
-				corso.setDataInizioCorso(new java.util.Date(rs.getDate(3).getTime()));
-				corso.setDataFineCorso(new java.util.Date(rs.getDate(4).getTime()));
+				corso.setDataInizioCorso((rs.getDate(3)));
+				corso.setDataFineCorso((rs.getDate(4)));
 				corso.setCostoCorso(rs.getDouble(5));
 				corso.setCommentiCorso(rs.getString(6));
 				corso.setAulaCorso(rs.getString(7));
@@ -78,8 +78,8 @@ public class CorsoDAO implements GenericDAO<Corso>, DAOConstants {
 				Corso c = new Corso();
 				c.setCodCorso(rs.getLong(1));
 				c.setNomeCorso(rs.getString(2));
-				c.setDataInizioCorso(new java.util.Date(rs.getDate(3).getTime()));
-				c.setDataFineCorso(new java.util.Date(rs.getDate(4).getTime()));
+				c.setDataInizioCorso((rs.getDate(3)));
+				c.setDataFineCorso((rs.getDate(4)));
 				c.setCostoCorso(rs.getDouble(5));
 				c.setCommentiCorso(rs.getString(6));
 				c.setAulaCorso(rs.getString(7));

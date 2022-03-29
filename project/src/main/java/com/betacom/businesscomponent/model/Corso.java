@@ -34,7 +34,7 @@ public class Corso {
 		this.nomeCorso = nomeCorso;
 	}
 	
-	public void setDataInizioCorso(java.util.Date date) {
+	public void setDataInizioCorso(Date date) {
 		this.dataInizioCorso = (Date) date;
 	}
 	public Date getDataInizioCorso() {
@@ -43,7 +43,7 @@ public class Corso {
 	public Date getDataFineCorso() {
 		return dataFineCorso;
 	}
-	public void setDataFineCorso(java.util.Date date) {
+	public void setDataFineCorso(Date date) {
 		this.dataFineCorso = (Date) date;
 	}
 	public double getCostoCorso() {

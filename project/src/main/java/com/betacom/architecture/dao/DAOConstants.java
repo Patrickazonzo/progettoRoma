@@ -1,19 +1,20 @@
 package com.betacom.architecture.dao;
 
 public interface DAOConstants {
-	public String SELECT_CORSISTA = "Select* from corsista";
+	public String SELECT_CORSISTA = "Select * from corsista";
 	public String SELECT_CORSISTA_BYID = "Select * from corsista where codCorsista=?";
 	public String DELETE_CORSISTA = "Delete from corsista where codCorsista=?";
 	public String DELETE_CORSO = "Delete from corso where codCorso=?";
 	public String SELECT_CORSO_BYID = "Select * from corso where codCorso=?";
-	public String SELECT_REPORT = "Select * from report";
+	public String SELECT_COD_CORSO = "select codcorso from corso where nomecorso = '?'";
+	
 	public String SELECT_ADMIN_COD = "Select codadmin from admin where nomeadmin = ? and cognomeadmin = ? ";
 	public String SELECT_CORSISTA_SEQ = "Select corsista_seq.nextval from dual";
 	public String SELECT_CORSO = "Select * from corso";
 	public String SELECT_DOC ="select * from docente";
-	public String SELECT_COGNOME_DOC = "Select cognomedocente from docente"
-			+ "join corso on corso.coddocente = docente.coddocente"
-			+ "where corso.codcorso = (select codcorso from corso"
+	public String SELECT_COGNOME_DOC = "Select cognomedocente from docente "
+			+ "join corso on corso.coddocente = docente.coddocente "
+			+ "where corso.codcorso = (select codcorso from corso "
 			+ "where nomecorso = '?')";
 
 
@@ -26,7 +27,7 @@ public interface DAOConstants {
 			+ "from corsista order by cognomecorsista desc";// ok
 	public String SELECT_DOC_CORSO = "SELECT  nomedocente as nome, cognomedocente as cognome, "
 			+ "COUNT(*) AS numcorsi FROM docente " + "join corso on corso.coddocente=docente.coddocente "
-			+ "GROUP BY nomedocente, cognomedocente having count(*)>1;";// OK
+			+ "GROUP BY nomedocente, cognomedocente having count(*)>1";// OK
 	public String SELECT_POSTI_LIBERI = "Select nomecorso, 12-count(*) as posti_disponibili from corso "
 			+ "left join corsistacorso on corso.codcorso=corsistacorso.codcorso " + "GROUP BY corso.nomecorso "
 			+ "HAVING count(*)<=12";// ok
