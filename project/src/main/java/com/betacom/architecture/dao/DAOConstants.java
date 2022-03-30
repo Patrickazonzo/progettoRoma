@@ -33,7 +33,8 @@ public interface DAOConstants {
 			+ "HAVING count(*)<=12";// ok
 	public String SELECT_INFO_CORSISTA = "Select * from corso "
 			+ "join corsistacorso on corsistacorso.codcorso=corso.codcorso "
-			+ "join corsista on corsista.codcorsista=corsistacorso.codcorsista";
+			+ "join corsista on corsista.codcorsista=corsistacorso.codcorsista " 
+			+ "where corsista.codcorsista = ?"; // ok
 	
 	public String INSERT_CORSISTA = "Insert into corsista values(?,?,?,?)";//
 	public String SELECT_CORSISTACORSO = "Select * from corsistacorso";// ok
