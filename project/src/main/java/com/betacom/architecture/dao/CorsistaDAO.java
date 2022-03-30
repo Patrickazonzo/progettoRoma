@@ -36,6 +36,7 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 
 		try {
 			rowSet.setCommand(SELECT_CORSISTA);
+			conn.setAutoCommit(false);
 			rowSet.execute(conn);
 			rowSet.moveToInsertRow();
 			rowSet.updateLong(1, CorsistaIdGenerator.getInstance().getNextId());

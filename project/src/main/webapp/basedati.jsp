@@ -15,9 +15,10 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-	<div class="container">
-		<div class="page-header">
+<div class="cors">
+		<div class="text-center">
 			<h3>Elenco Corsisti</h3>
+		</div>
 			<div class="table-responsive">
 				<table class="table table-hover">
 					<thead>
@@ -36,10 +37,11 @@
 					%>
 						<tr> 
 							
-							<td><%= corsisti[i].getCodCorsista() %> </td>
-							<td><form action="informazionicorsista?codcorsista=<%= corsisti[i].getCodCorsista() %>" method="post"> <input type="submit" name="3" 
-							value="<%= corsisti[i].getNomeCorsista()%>"> 
-							</form></td>
+							<td><form action="infocorsista.jsp" method="post">
+									<input type="submit" class="btn btn-outline-info" role="button" name="codcorsista" aria-pressed="true" value="<%= corsisti[i].getCodCorsista()%>">
+								</form>
+							</td>
+							<td><%=corsisti[i].getNomeCorsista() %></td>
 							<td><%= corsisti[i].getCognomeCorsista()  %></td>
 							<td><%= corsisti[i].getPrecedentiFormativi() %>  </td>
 						</tr>
@@ -50,7 +52,7 @@
 				</table>
 			</div>
 		</div>
-	</div>
+	
 	<footer class="footer"><%@ include file="footer.html"%>
 	</footer>
 </body>

@@ -19,12 +19,13 @@ public class CorsistaUtility implements DAOConstants {
 		conn = DBAccess.getConnection();
 	}
 
-	public String[] getInfoCorsista(Object cod) throws DAOException {
+	public String[] getInfoCorsista(String cod) throws DAOException {
 		PreparedStatement ps;
 		
 		try {
 			ps = conn.prepareStatement(SELECT_INFO_CORSISTA);
-			ps.setObject(1, cod);
+			int codice = Integer.parseInt(cod);
+			ps.setInt(1, codice);
 			ResultSet rs = ps.executeQuery();
 			ResultSetMetaData rsMD = rs.getMetaData();
 			int NUMERO_COLONNE = rsMD.getColumnCount();

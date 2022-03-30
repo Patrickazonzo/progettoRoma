@@ -1,4 +1,3 @@
-
 <%
 String nomeAdmin = (String) session.getAttribute("nomeadmin");
 if (nomeAdmin != null) {
@@ -50,7 +49,7 @@ if (nomeAdmin != null) {
 				    </div>
 				   	   	<div class="col-auto">   
 				   	   	  <input type="text"
-						name="nomecorso" placeholder="corso..." class="form-control" aria-describedby="passwordHelpInline">   
+						name="nomecorso" placeholder="Corso..." class="form-control" aria-describedby="passwordHelpInline">   
 				   	   	 </div> 			   	   			    
 				 </div>
 				
@@ -93,9 +92,9 @@ if (nomeAdmin != null) {
 				    </div>
 				   	  <div class="mt-2 d-flex"> 
 				   	  <div class="form-check mr-2"> 
-				   	    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>   <label class="form-check-label" for="exampleRadios1">Si</label> </div>
+				   	    <input class="form-check-input" type="radio" name="precedentiformativi" id="exampleRadios1" value="1">   <label class="form-check-label" for="exampleRadios1">Si</label> </div>
 				   	     <div class="form-check">   
-				   	     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">   <label class="form-check-label" for="exampleRadios2">No</label> </div>
+				   	     <input class="form-check-input" type="radio" name="precedentiformativi" id="exampleRadios2" value="0">   <label class="form-check-label" for="exampleRadios2">No</label> </div>
 				   	 </div>
 				   	  <!--  	 <input type="text"
 						name="precedentiformativi" placeholder="1 o Zero"

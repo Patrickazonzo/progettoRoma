@@ -45,6 +45,7 @@ public class InserisciCorsista extends HttpServlet {
 			}
 			
 			corsista.setPrecedentiFormativi(Byte.parseByte(request.getParameter("precedentiformativi")));
+			//corsista.setPrecedentiFormativi(request.getParameter("precedentiformativi");
 
 			boolean verificacorso = Pattern.matches("^[a-zA-Z-]{1,30}$", request.getParameter("nomecorso"));
 			Corso[] nomecorsi = aF.getAllCorsi();

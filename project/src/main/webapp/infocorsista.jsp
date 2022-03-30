@@ -1,10 +1,9 @@
-<%@page import="com.betacom.businesscomponent.utility.CorsistaUtility"%>
 <%
 String nomeAdmin = (String) session.getAttribute("nomeadmin");
 if (nomeAdmin != null) {
 %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@page import="com.betacom.businesscomponent.utility.CorsistaUtility"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,9 +13,10 @@ if (nomeAdmin != null) {
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<div class="d-flex justify-content-center">
-		<div class="page-header m-3">
+	<div class="cors">
+		<div class="text-center">
 			<h3>Statistiche corsista</h3>
+		</div>
 			<table>
 				<thead>
 					<tr>
@@ -39,6 +39,7 @@ if (nomeAdmin != null) {
 					<%
 					CorsistaUtility cU = new CorsistaUtility();
 					String[] dati = cU.getInfoCorsista(request.getParameter("codcorsista"));
+					
 					%>
 					
 					<tr>
@@ -55,7 +56,7 @@ if (nomeAdmin != null) {
 
 						<td><%=dati[11]%></td>
 						<td><%=dati[12]%></td>
-						<td><%=dati[13]%></td>
+						<td><%=dati[13]%></td> 
 						
 
 
@@ -63,13 +64,7 @@ if (nomeAdmin != null) {
 				</tbody>
 
 			</table>
-
-			<form action="Admin.jsp">
-				<button type="submit">Torna alla pagina admin</button>
-			</form>
-		</div>
-	</div>
-
+			</div>
 	<footer class="footer"><%@ include file="footer.html"%>
 	</footer>
 </body>
