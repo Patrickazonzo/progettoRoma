@@ -10,18 +10,11 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-
-
-
 	<div class="container-fluid d-flex justify-content-between" id="flo">
-	
 		<a href="insertCorsista.jsp"><button type="button" class="btn uno" ></button></a>
-
 		<a href="visualizzareport.jsp"><button type="button" class="btn due"></button></a>
-
 		<a href="eliminacorsista.jsp"><button type="button" class="btn tre"></button></a>
-		
-	</div>
+	</div> 
 	
 
 	<footer class="footer"><%@ include file="footer.html"%>
