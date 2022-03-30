@@ -12,8 +12,8 @@
 	background-image: url("../img/sfondo3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width:105%;
-    background-position:botton;
+    background-position: center;
+   
     padding-bottom: 9%;
 }
 .campo{
