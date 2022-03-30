@@ -17,9 +17,9 @@
 	
 		<a href="insertCorsista.jsp"><button type="button" class="btn uno" ></button></a>
 
-		<button type="button" class="btn due"></button>
+		<a href="visualizzareport.jsp"><button type="button" class="btn due"></button></a>
 
-		<button type="button" class="btn tre"></button>
+		<a href="eliminacorsista.jsp"><button type="button" class="btn tre"></button></a>
 		
 	</div>
 	
