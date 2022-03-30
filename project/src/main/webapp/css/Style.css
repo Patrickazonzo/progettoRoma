@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 .corpo{
-   background-image: url("../img/sfondo3.jpg");
+   background-image: url("../img/23.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,17 +8,40 @@
     padding-bottom: 9%;
 
 }
+
+.social-bar {
+  margin-left: 190px;
+}
+.social-bar ul {
+  list-style: none;
+}
+.social-bar ul li a {
+  color: black;
+
+  padding: 10px 15px;
+  text-decoration: all 0.3s ease-out;
+}
+.social-bar ul li a:hover {
+  padding: 10px 50px;
+  
+}
+
+.stud {
+	width: 100px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+
 .cors{
-	background-image: url("../img/sfondo3.jpg");
+	background-image: url("../img/23.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
    
-    padding-bottom: 9%;
-}
-.campo{
-
-	padding-bottom: 20px;
 }
 .vs {
    border-color: white;
@@ -54,29 +77,9 @@
 #piepag {
     padding: 15px;
 }
-#flo{
- background-image: url("../img/sfo1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
- 
-}
 
 
-.uno{
-		
-	padding:280px;
 
-}
-.due {
-	padding:280px;
-	
-}
-.tre{
-		
-	padding:250px;
-
-}
 #dea{
 	
  	width: 220px;
