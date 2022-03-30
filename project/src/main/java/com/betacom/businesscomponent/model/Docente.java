@@ -7,6 +7,10 @@ public class Docente {
 	private String cvdocente;
 	
 	
+	public Docente() {
+		
+	}
+	
 	public int getCoddocente() {
 		return coddocente;
 	}
