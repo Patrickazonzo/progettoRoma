@@ -99,10 +99,15 @@ int g= (int) (giorni*5/7);
 			</tr> 
 		</table>
 	</div>
+				<div>
+					<form action="Admin.jsp" method="post">
+						<input type="submit" class="btn btn-outline-info" role="button" aria-pressed="true" value="Torna alla pagina di amministrazione">
+					</form>
+				</div>
 
 </div>
 
-	<footer class="footer"><%@ include file="footer.html"%>
+	<footer class="footer"><%@ include file="footer.jsp"%>
 	</footer>
 </body>
 </html>

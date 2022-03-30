@@ -22,12 +22,12 @@ public class CorsoDAO implements GenericDAO<Corso>, DAOConstants {
 	public void create(Connection conn, Corso entity) throws DAOException {
 	}
 
-	@Override
-	public void delete(Connection conn, Corso entity) throws DAOException {
+	
+	public void delete(Connection conn, long cod) throws DAOException {
 		PreparedStatement ps;
 		try {
 			ps = conn.prepareStatement(DELETE_CORSO);
-			ps.setLong(1, entity.getCodCorso());
+			ps.setLong(1, cod);
 			ps.execute();
 			conn.commit();
 		} catch (SQLException sql) {
@@ -93,6 +93,12 @@ public class CorsoDAO implements GenericDAO<Corso>, DAOConstants {
 		}
 		return corsi;
 
+	}
+
+	@Override
+	public void delete(Connection conn, Corso entity) throws DAOException {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

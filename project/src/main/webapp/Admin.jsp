@@ -20,11 +20,11 @@ if (nomeAdmin != null) {
         <ul>
           <li class=" pt-5 mb-4"><a href="insertCorsista.jsp"><img alt="Logo" class="stud" src="img/studente.png"><b class="ml-2">Inserisci corsista</b></a></li>
           <li class="mb-4"><a href="visualizzareport.jsp"><img alt="Logo" class="stud" src="img/studente.png"><b class="ml-2">Statistiche</b></a></li>
-          <li class="pb-5"><a href="#"><img alt="Logo" class="stud" src="img/studente.png"><b class="ml-2">Elimina Corso</b></a></li>
+          <li class="pb-5"><a href="cancellacorso.jsp"><img alt="Logo" class="stud" src="img/studente.png"><b class="ml-2">Elimina Corso</b></a></li>
         </ul>
       </div>
      </div>
-	<footer class="footer"><%@ include file="footer.html"%>
+	<footer class="footer"><%@ include file="footer.jsp"%>
 	</footer>
 </body>
 </html>

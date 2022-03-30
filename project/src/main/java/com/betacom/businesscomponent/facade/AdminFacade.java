@@ -24,9 +24,9 @@ public class AdminFacade {
 		return aF;
 	}
 
-	public void deleteCorso(Corso c) throws DAOException, ClassNotFoundException, IOException {
+	public void deleteCorso(long cod) throws DAOException, ClassNotFoundException, IOException {
 		CorsoBC cBC = new CorsoBC();
-		cBC.delete(c);
+		cBC.delete(cod);
 	}
 	
 	public void createCorsista(Corsista cs) throws ClassNotFoundException, DAOException, IOException {

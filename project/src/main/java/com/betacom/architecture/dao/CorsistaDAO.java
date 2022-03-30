@@ -1,6 +1,5 @@
 package com.betacom.architecture.dao;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,9 +9,7 @@ import java.sql.Statement;
 import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.RowSetProvider;
 
-import com.betacom.businesscomponent.idgenerator.CorsistaIdGenerator;
 import com.betacom.businesscomponent.model.Corsista;
-import com.betacom.businesscomponent.model.Docente;
 
 public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 	private CachedRowSet rowSet;
@@ -36,22 +33,18 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 
 		try {
 			rowSet.setCommand(SELECT_CORSISTA);
-			conn.setAutoCommit(false);
 			rowSet.execute(conn);
 			rowSet.moveToInsertRow();
-			rowSet.updateLong(1, CorsistaIdGenerator.getInstance().getNextId());
+			rowSet.updateLong(1, entity.getCodCorsista());
 			rowSet.updateString(2, entity.getNomeCorsista());
 			rowSet.updateString(3, entity.getCognomeCorsista());
 			rowSet.updateByte(4, entity.getPrecedentiFormativi());
-			rowSet.insertRow();
-			rowSet.moveToCurrentRow();
+			rowSet.insertRow();	
+			rowSet.moveToCurrentRow();			
 			rowSet.acceptChanges();
-
+			
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
-		}catch(IOException | ClassNotFoundException exc) {
-			System.out.println(exc.getMessage());
-			exc.printStackTrace();
 		}
 	}
 
@@ -97,7 +90,7 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants {
 		try {
 			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
-			ResultSet rs = stmt.executeQuery(SELECT_CORSISTA);
+			ResultSet rs = stmt.executeQuery(SELECT_CORSISTA_ORDER);
 			rs.last();
 			corsisti = new Corsista[rs.getRow()];
 			rs.beforeFirst();

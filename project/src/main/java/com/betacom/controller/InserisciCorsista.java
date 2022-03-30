@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.betacom.architecture.dao.DAOException;
 import com.betacom.businesscomponent.facade.AdminFacade;
+import com.betacom.businesscomponent.idgenerator.CorsistaIdGenerator;
 import com.betacom.businesscomponent.model.Corsista;
 import com.betacom.businesscomponent.model.CorsistaCorso;
 import com.betacom.businesscomponent.model.Corso;
@@ -33,7 +34,7 @@ public class InserisciCorsista extends HttpServlet {
 		Corso c = new Corso();
 
 		try {
-
+			corsista.setCodCorsista(CorsistaIdGenerator.getInstance().getNextId());
 			boolean verificanome = Pattern.matches("^[a-zA-Z-]{1,30}$", request.getParameter("nomecorsista"));
 			if (verificanome == true) {
 				corsista.setNomeCorsista(request.getParameter("nomecorsista"));

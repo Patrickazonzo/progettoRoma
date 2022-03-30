@@ -24,8 +24,7 @@
 	</div>
 </div>
 </div>
-<footer class="footer"><%@ include file="footer.html" %>
+<footer class="footer"><%@ include file="footer.jsp" %>
 </footer>
-</body>
 </body>
 </html>

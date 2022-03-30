@@ -64,8 +64,15 @@ if (nomeAdmin != null) {
 				</tbody>
 
 			</table>
+			<center>
+				<td>
+					<form action="Admin.jsp" method="post">
+						<input type="submit" class="btn btn-outline-info" role="button" aria-pressed="true" value="Torna alla pagina di amministrazione">
+					</form>
+				</td>
+			</center>
 			</div>
-	<footer class="footer"><%@ include file="footer.html"%>
+	<footer class="footer"><%@ include file="footer.jsp"%>
 	</footer>
 </body>
 </html>

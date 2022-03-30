@@ -25,10 +25,10 @@ public class CorsoBC {
 		}
 	}
 
-	public void delete(Corso corso) throws DAOException, ClassNotFoundException, IOException {
+	public void delete(long cod) throws DAOException, ClassNotFoundException, IOException {
 		try {
 			conn = DBAccess.getConnection();
-			CorsoDAO.getFactory().delete(conn, corso);
+			CorsoDAO.getFactory().delete(conn, cod);
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
 		} finally {

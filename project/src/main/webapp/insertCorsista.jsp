@@ -87,19 +87,20 @@ if (nomeAdmin != null) {
 				 </div>
 				 
 				  <div class="d-flex  mb-3">
-				   <div class="col-auto">     
-				   	<label class="col-form-label">Precedenti formativi</label>
-				    </div>
-				   	  <div class="mt-2 d-flex"> 
-				   	  <div class="form-check mr-2"> 
-				   	    <input class="form-check-input" type="radio" name="precedentiformativi" id="exampleRadios1" value="1">   <label class="form-check-label" for="exampleRadios1">Si</label> </div>
-				   	     <div class="form-check">   
-				   	     <input class="form-check-input" type="radio" name="precedentiformativi" id="exampleRadios2" value="0">   <label class="form-check-label" for="exampleRadios2">No</label> </div>
-				   	 </div>
-				   	  <!--  	 <input type="text"
-						name="precedentiformativi" placeholder="1 o Zero"
-						class="form-control" aria-describedby="passwordHelpInline">    -->
-				   	   	 </div> 			   	   			    
+					   <div class="col-auto">     
+					   	<label class="col-form-label">Precedenti formativi</label>
+					    </div>
+					   	  <div class="mt-2 d-flex"> 
+						   	  <div class="form-check mr-2"> 
+						   	    <input class="form-check-input" type="radio" name="precedentiformativi" id="exampleRadios1" value="1">  
+						   	     	<label class="form-check-label" for="exampleRadios1">Si</label> 
+						   	  </div>
+						   	   <div class="form-check">   
+						   	     	<input class="form-check-input" type="radio" name="precedentiformativi" id="exampleRadios2" value="0"> 
+						   	       		<label class="form-check-label" for="exampleRadios2">No</label> 
+						   	   </div>
+					   	 </div>
+				 </div> 			   	   			    
 				
 				 
 				  <div class="d-flex justify-content-between mb-3">
@@ -110,8 +111,7 @@ if (nomeAdmin != null) {
 				   	   	 <input type="text"
 						name="aulacorso" placeholder="Aula corso..." class="form-control" aria-describedby="passwordHelpInline">   
 				   	   	 </div> 			   	   			    
-				 </div>
-				 
+				 </div>				 
 				   <div class="d-flex justify-content-between mb-3">
 				  	 <div class="col-auto">     
 				   		<label class="col-form-label">Docente</label>
@@ -121,27 +121,15 @@ if (nomeAdmin != null) {
 						name="docente" placeholder="Docente..." class="form-control" aria-describedby="passwordHelpInline">   
 				   	   	 </div> 			   	   			    
 				 </div>
-				<div class="row d-flex justify-content-end">
-				
-					
+				<div class="row d-flex justify-content-end">					
 						<input type="submit" class="btn btn-primary mt-4"><span
-							class="glyphicon glyphicon-log-in"></span>
-					
-				</div>
-				
+							class="glyphicon glyphicon-log-in"></span>					
+				</div>				
 			</form>
-	
-			<!--  <div class="ml-5">
-				<img id="dea1" alt="Logo" src="img/12.png">
-			</div>-->
-		</div>
-	
-	</div>
-	
-	<!-- 	<a><img id="dea" alt="Logo" src="img/dea.png"></a>
-	 -->
-		<footer class="footer"><%@ include file="footer.html"%>
-		</footer>
+		</div>	
+	</div>	
+	<footer class="footer"><%@ include file="footer.jsp"%>
+	</footer>
 	
 </body>
 </html>
