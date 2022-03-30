@@ -4,11 +4,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 9%;
+    
     padding-bottom: 9%;
 
 }
-
+.cors{
+	 background-image: url("../img/sfondo3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -50px;
+    padding-bottom: 9%;
+}
 .campo{
 	padding-bottom: 20px;
 }
@@ -19,9 +26,9 @@
 }
 
 #apice {
-	margin:0;
+	
 	display: flex;
-  flex-wrap: wrap;
+ 	 flex-wrap: wrap;
    justify-content: space-between;
 }
 
