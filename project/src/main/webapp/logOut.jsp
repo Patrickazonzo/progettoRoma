@@ -1,4 +1,3 @@
-
 <%
 	String nomeAdmin= (String) session.getAttribute("nomeadmin");
 	if(nomeAdmin!=null){
