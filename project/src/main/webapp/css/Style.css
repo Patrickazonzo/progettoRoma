@@ -4,23 +4,31 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
+    padding-top: 9%;
     padding-bottom: 9%;
 
 }
 .cors{
-	 background-image: url("../img/sfondo3.jpg");
+	background-image: url("../img/sfondo3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    margin-top: -50px;
+    width:105%;
+    background-position:botton;
     padding-bottom: 9%;
 }
 .campo{
+
 	padding-bottom: 20px;
 }
-
-
+.vs {
+   border-color: white;
+   }
+   .vs:hover {
+    background-color:white;
+   }
+   .active:vs{
+   background-color:white;
+   }
 .icona{
   width: 110px;
 }

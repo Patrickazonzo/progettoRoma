@@ -27,16 +27,16 @@ if (nomeAdmin != null) {
 				   <div class="col-auto">     
 				   	<label class="col-form-label"><b>Nome</b></label>
 				    </div>
-				   	   	<div class="col-auto">   
+				   	<div class="col-auto">   
 				   	   	  <input type="text" name="nomecorsista" placeholder="Nome..."
 									class="form-control" aria-describedby="passwordHelpInline">   
-				   	   	 </div> 			   	   			    
+				 	</div> 			   	   			    
 				 </div>
 				
 				
 				<div class="d-flex justify-content-between mb-3">
 				   <div class="col-auto">     
-				   	<label class="col-form-label"><b>Cognome	</b></label>
+				   	<label class="col-form-label"><b>Cognome</b></label>
 				    </div>
 				   	   	<div class="col-auto">   
 				   	   	  <input type="text" name="cognomecorsista" placeholder="Cognome..."
@@ -91,16 +91,12 @@ if (nomeAdmin != null) {
 				   <div class="col-auto">     
 				   	<label class="col-form-label">Precedenti formativi</label>
 				    </div>
-				   	   
-				   	   <div class="btn-group btn-group-toggle" data-toggle="buttons">
-				   	   	<label class="btn">
-	    					<input type="radio" name="1" > Si
-	 					 </label>
-						<label class="btn">
-	    					<input type="radio" name="0" > No
-	 					 </label>
+				   	  <div class="mt-2 d-flex"> 
+				   	  <div class="form-check mr-2"> 
+				   	    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>   <label class="form-check-label" for="exampleRadios1">Si</label> </div>
+				   	     <div class="form-check">   
+				   	     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">   <label class="form-check-label" for="exampleRadios2">No</label> </div>
 				   	 </div>
-				   	 
 				   	  <!--  	 <input type="text"
 						name="precedentiformativi" placeholder="1 o Zero"
 						class="form-control" aria-describedby="passwordHelpInline">    -->

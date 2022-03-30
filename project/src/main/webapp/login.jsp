@@ -10,7 +10,13 @@
 <title>login</title>
 </head>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
+	<header>
+	<nav class="navbar navbar-expand-lg " id="apice">
+			<div>
+				<a class="navbar-brand"><img alt="Logo" src="img/logo2.png"></a>
+			</div>
+	</nav>
+	</header>
 	<div class="d-flex justify-content-center corpo">
 		<div class="page-header m-3">
 			<h3>Admin Login</h3>
