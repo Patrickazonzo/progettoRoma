@@ -34,14 +34,17 @@
 					for (int i = 0; i < corsisti.length; i++){
 						
 					%>
-						<tr>
-							<td><%= corsisti[i].getCodCorsista() %></td>
-							<form action="infocorsista.jsp"><td>
-							 <button type="submit"><%= corsisti[i].getNomeCorsista()%></button>
-							 </form></td>
+						<tr> 
+							
+							<td><%= corsisti[i].getCodCorsista() %> </td>
+							<td><form action="informazionicorsista" method="post"> <input type="submit" name="codcorsista" 
+							value="<%= corsisti[i].getNomeCorsista()%>"> 
+							</form></td>
 							<td><%= corsisti[i].getCognomeCorsista()  %></td>
-							<td><%= corsisti[i].getPrecedentiFormativi() %></td>			
+							<td><%= corsisti[i].getPrecedentiFormativi() %>  </td>
 						</tr>
+					
+						
 			<% } %>
 					</tbody>
 				</table>
