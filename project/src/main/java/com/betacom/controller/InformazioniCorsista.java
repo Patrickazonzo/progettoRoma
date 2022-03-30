@@ -19,15 +19,19 @@ public class InformazioniCorsista extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cod = request.getParameter("codcorsista");
+		System.out.println("Qui ci arrivo");
 		try {
 			CorsistaUtility cU = new CorsistaUtility();
+			System.out.println("Creata CorsistaUtility");
 			if(cod != null) {
 				cU.getInfoCorsista(cod);
+				System.out.println("Cod not null");
 			}
 		} catch (DAOException | ClassNotFoundException | IOException e) {
 			e.printStackTrace();
 			e.getMessage();
 		}
+	
 		response.sendRedirect("infocorsista.jsp");
 	}
 

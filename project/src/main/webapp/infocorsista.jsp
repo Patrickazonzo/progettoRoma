@@ -38,7 +38,7 @@ if (nomeAdmin != null) {
 				<tbody>
 					<%
 					CorsistaUtility cU = new CorsistaUtility();
-					String[] dati = cU.getInfoCorsista(session.getAttribute("codcorsista"));
+					String[] dati = cU.getInfoCorsista(request.getParameter("codcorsista"));
 					%>
 					
 					<tr>

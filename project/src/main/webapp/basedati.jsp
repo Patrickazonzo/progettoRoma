@@ -37,7 +37,7 @@
 						<tr> 
 							
 							<td><%= corsisti[i].getCodCorsista() %> </td>
-							<td><form action="informazionicorsista" method="post"> <input type="submit" name="codcorsista" 
+							<td><form action="informazionicorsista?codcorsista=<%= corsisti[i].getCodCorsista() %>" method="post"> <input type="submit" name="3" 
 							value="<%= corsisti[i].getNomeCorsista()%>"> 
 							</form></td>
 							<td><%= corsisti[i].getCognomeCorsista()  %></td>
